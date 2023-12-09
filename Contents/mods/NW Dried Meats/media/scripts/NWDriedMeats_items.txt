@@ -1,0 +1,70 @@
+	
+	
+module Base
+{
+
+	item NWDriedMeatPackage
+	{
+		DisplayCategory 			= Food,
+		Weight 						= 0.15,
+		Type 						= Normal,
+		DisplayName					= Dried Meat Package,
+		Icon 						= NWDriedMeatPackage,
+		MetalValue 					= 60,
+		WorldStaticModel 			= CanClosedMilk,
+	}
+
+	item NWDriedSteak
+	{
+		DisplayName 				= Freeze-Dried Steak,
+		DisplayCategory 			= Food,
+		Type 						= Food,
+		Weight 						= 0.1,
+		Icon 						= NWDriedSteak,
+		DangerousUncooked 			= TRUE,
+		HungerChange 				= -30,
+		ThirstChange 				= 18,
+		Calories 					= 150,
+		Carbohydrates 				= 0,
+		Lipids 						= 4.35,
+		Proteins 					= 24.62,
+		WorldStaticModel 			= Steak,
+	}
+	
+	item NWDriedChicken
+	{
+		DisplayName 				= Freeze-Dried Chicken,
+		DisplayCategory 			= Food,
+		Type						= Food,
+		Weight 						= 0.1,
+		Icon 						= NWDriedChicken,
+		DangerousUncooked 			= TRUE,
+		HungerChange 				= -26,
+		ThirstChange 				= 18,
+		Calories 					= 70,
+		Carbohydrates 				= 0,
+		Lipids 						= 5,
+		Proteins 					= 10,
+		StaticModel 				= FriedChicken,
+		WorldStaticModel 			= Chicken,
+	}
+	
+	item NWDriedPorkChop
+	{
+		DisplayName 				= Freeze-Dried Pork Chop,
+		DisplayCategory 			= Food,
+		Type 						= Food,
+		Weight 						= 0.1,
+		Icon 						= NWDriedPorkChop,
+		DangerousUncooked 			= TRUE,
+		HungerChange 				= -20,
+		ThirstChange 				= 18,
+		Calories 					= 75,
+		Carbohydrates 				= 0,
+		Lipids 						= 2,
+		Proteins 					= 20,
+		WorldStaticModel 			= PorkChop,
+		EvolvedRecipeName 			= Pork,
+	}
+	
+}

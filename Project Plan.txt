@@ -1,0 +1,25 @@
+Freeze Dried Meats:
+	Find the meat packages in world,
+	Recipe to open package,
+	Randomize 1 of 3 freeze dried meats:
+		steak, chicken, pork 
+		(non-perishable in freeze dried state)
+		(unhappiness, boredom, thirst if consumed dried)
+		(Hunger, calorie, fat values lower than if cooked properly)
+	Add to player inventory
+	3 Recipes to add water to the dried meats and convert them to normal
+
+Need to make:
+
+	Dried Meat Package	(items)
+		Dried Steak
+		Dried Chicken
+		Dried Pork
+	
+	Open Package		(recipes)
+		Re-hydrate steak
+			Give cooking XP
+		Re-hydrate chicken
+			Give cooking XP
+		Re-hydrate pork
+			Give cooking XP

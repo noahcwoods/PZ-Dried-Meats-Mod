@@ -1,0 +1,53 @@
+	
+	
+module Base
+{
+
+	recipe Open Dried Meat Package
+	{
+		NWDriedMeatPackage,
+
+        Result:TinCanEmpty,
+        Time:60,
+		Category:Cooking,
+		Sound: OpenSeedPacket,
+		OnCreate:Recipe.OnCreate.NWGiveMeat,
+	}
+
+	recipe Rehydrate Steak
+	{
+		NWDriedSteak,
+		Water=5,
+
+        Result:Steak,
+        Time:120,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking3,
+		AnimNode:Disassemble,
+	}
+	
+	recipe Rehydrate Chicken
+	{
+		NWDriedChicken,
+		Water=5,
+
+        Result:Chicken,
+        Time:120,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking3,
+		AnimNode:Disassemble,
+	}
+	
+	recipe Rehydrate Pork Chop
+	{
+		NWDriedPorkChop,
+		Water=5,
+
+        Result:PorkChop,
+        Time:120,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking3,
+		AnimNode:Disassemble,
+	}
+	
+}
