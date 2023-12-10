@@ -1,1442 +1,756 @@
-require 'Items/ProceduralDistributions'
+require "Items/ProceduralDistributions"
+require "Items/ItemPicker"
 
-table.insert(ProceduralDistributions["List"]["Antiques"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Antiques"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmyHangarOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmyHangarOutfit"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmyHangarTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmyHangarTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmyStorageAmmunition"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmyStorageAmmunition"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmyStorageElectronics"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmyStorageElectronics"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmyStorageGuns"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmyStorageGuns"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmyStorageMedical"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmyStorageMedical"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmyStorageOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmyStorageOutfit"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmySurplusBackpacks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmySurplusBackpacks"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmySurplusFootwear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmySurplusFootwear"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmySurplusHeadwear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmySurplusHeadwear"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmySurplusMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmySurplusMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmySurplusOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmySurplusOutfit"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArmySurplusTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArmySurplusTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArtStoreOther"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArtStoreOther"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArtStorePaper"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArtStorePaper"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArtStorePen"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArtStorePen"].items, 10);
-table.insert(ProceduralDistributions["List"]["ArtSupplies"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ArtSupplies"].items, 10);
-table.insert(ProceduralDistributions["List"]["Bakery"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Bakery"].items, 10);
-table.insert(ProceduralDistributions["List"]["BakeryBread"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BakeryBread"].items, 10);
-table.insert(ProceduralDistributions["List"]["BakeryCake"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BakeryCake"].items, 10);
-table.insert(ProceduralDistributions["List"]["BakeryDoughnuts"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BakeryDoughnuts"].items, 10);
-table.insert(ProceduralDistributions["List"]["BakeryKitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BakeryKitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["BakeryKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BakeryKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["BakeryKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BakeryKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["BakeryMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BakeryMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["BakeryPie"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BakeryPie"].items, 10);
-table.insert(ProceduralDistributions["List"]["BandMerchClothes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BandMerchClothes"].items, 10);
-table.insert(ProceduralDistributions["List"]["BandMerchShelves"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BandMerchShelves"].items, 10);
-table.insert(ProceduralDistributions["List"]["BandPracticeClothing"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BandPracticeClothing"].items, 10);
-table.insert(ProceduralDistributions["List"]["BandPracticeFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BandPracticeFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["BandPracticeInstruments"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BandPracticeInstruments"].items, 10);
-table.insert(ProceduralDistributions["List"]["BarCounterGlasses"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BarCounterGlasses"].items, 10);
-table.insert(ProceduralDistributions["List"]["BarCounterLiquor"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BarCounterLiquor"].items, 10);
-table.insert(ProceduralDistributions["List"]["BarCounterMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BarCounterMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["BarCounterWeapon"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BarCounterWeapon"].items, 10);
-table.insert(ProceduralDistributions["List"]["BarCrateDarts"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BarCrateDarts"].items, 10);
-table.insert(ProceduralDistributions["List"]["BarCratePool"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BarCratePool"].items, 10);
-table.insert(ProceduralDistributions["List"]["BarShelfLiquor"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BarShelfLiquor"].items, 10);
-table.insert(ProceduralDistributions["List"]["BaseballStoreShelves"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BaseballStoreShelves"].items, 10);
-table.insert(ProceduralDistributions["List"]["BatFactoryBats"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BatFactoryBats"].items, 10);
-table.insert(ProceduralDistributions["List"]["BathroomCabinet"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BathroomCabinet"].items, 10);
-table.insert(ProceduralDistributions["List"]["BathroomCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BathroomCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["BathroomCounterEmpty"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BathroomCounterEmpty"].items, 10);
-table.insert(ProceduralDistributions["List"]["BathroomCounterNoMeds"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BathroomCounterNoMeds"].items, 10);
-table.insert(ProceduralDistributions["List"]["BathroomShelf"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BathroomShelf"].items, 10);
-table.insert(ProceduralDistributions["List"]["BedroomDresser"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BedroomDresser"].items, 10);
-table.insert(ProceduralDistributions["List"]["BedroomSideTable"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BedroomSideTable"].items, 10);
-table.insert(ProceduralDistributions["List"]["BinBar"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BinBar"].items, 10);
-table.insert(ProceduralDistributions["List"]["BinDumpster"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BinDumpster"].items, 10);
-table.insert(ProceduralDistributions["List"]["BinGeneric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BinGeneric"].items, 10);
-table.insert(ProceduralDistributions["List"]["BookstoreBags"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BookstoreBags"].items, 10);
-table.insert(ProceduralDistributions["List"]["BookstoreBooks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BookstoreBooks"].items, 10);
-table.insert(ProceduralDistributions["List"]["BookstoreMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BookstoreMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["BookstoreStationery"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BookstoreStationery"].items, 10);
-table.insert(ProceduralDistributions["List"]["BowlingAlleyLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BowlingAlleyLockers"].items, 10);
-table.insert(ProceduralDistributions["List"]["BowlingAlleyShoes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BowlingAlleyShoes"].items, 10);
-table.insert(ProceduralDistributions["List"]["BreakRoomCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BreakRoomCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["BreakRoomShelves"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BreakRoomShelves"].items, 10);
-table.insert(ProceduralDistributions["List"]["BreweryBottles"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BreweryBottles"].items, 10);
-table.insert(ProceduralDistributions["List"]["BreweryCans"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BreweryCans"].items, 10);
-table.insert(ProceduralDistributions["List"]["BreweryEmptyBottles"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BreweryEmptyBottles"].items, 10);
-table.insert(ProceduralDistributions["List"]["BurgerKitchenButcher"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BurgerKitchenButcher"].items, 10);
-table.insert(ProceduralDistributions["List"]["BurgerKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BurgerKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["BurgerKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BurgerKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["BurgerKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BurgerKitchenSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["BurglarTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["BurglarTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["ButcherChicken"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ButcherChicken"].items, 10);
-table.insert(ProceduralDistributions["List"]["ButcherChops"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ButcherChops"].items, 10);
-table.insert(ProceduralDistributions["List"]["ButcherFish"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ButcherFish"].items, 10);
-table.insert(ProceduralDistributions["List"]["ButcherFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ButcherFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["ButcherGround"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ButcherGround"].items, 10);
-table.insert(ProceduralDistributions["List"]["ButcherSmoked"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ButcherSmoked"].items, 10);
-table.insert(ProceduralDistributions["List"]["ButcherSnacks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ButcherSnacks"].items, 10);
-table.insert(ProceduralDistributions["List"]["ButcherTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ButcherTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["CabinetFactoryTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CabinetFactoryTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["CafeKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CafeKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["CafeShelfBooks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CafeShelfBooks"].items, 10);
-table.insert(ProceduralDistributions["List"]["CafeteriaDrinks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CafeteriaDrinks"].items, 10);
-table.insert(ProceduralDistributions["List"]["CafeteriaFruit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CafeteriaFruit"].items, 10);
-table.insert(ProceduralDistributions["List"]["CafeteriaSandwiches"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CafeteriaSandwiches"].items, 10);
-table.insert(ProceduralDistributions["List"]["CafeteriaSnacks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CafeteriaSnacks"].items, 10);
-table.insert(ProceduralDistributions["List"]["CameraStoreDisplayCase"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CameraStoreDisplayCase"].items, 10);
-table.insert(ProceduralDistributions["List"]["CameraStoreShelves"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CameraStoreShelves"].items, 10);
-table.insert(ProceduralDistributions["List"]["CampingLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CampingLockers"].items, 10);
-table.insert(ProceduralDistributions["List"]["CampingStoreBackpacks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CampingStoreBackpacks"].items, 10);
-table.insert(ProceduralDistributions["List"]["CampingStoreBooks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CampingStoreBooks"].items, 10);
-table.insert(ProceduralDistributions["List"]["CampingStoreClothes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CampingStoreClothes"].items, 10);
-table.insert(ProceduralDistributions["List"]["CampingStoreGear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CampingStoreGear"].items, 10);
-table.insert(ProceduralDistributions["List"]["CampingStoreLegwear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CampingStoreLegwear"].items, 10);
-table.insert(ProceduralDistributions["List"]["CandyStoreSnacks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CandyStoreSnacks"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarBrakesModern10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarBrakesModern10"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarBrakesModern2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarBrakesModern2"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarBrakesModern3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarBrakesModern3"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarBrakesNormal10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarBrakesNormal10"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarBrakesNormal2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarBrakesNormal2"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarBrakesNormal3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarBrakesNormal3"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarSupplyTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarSupplyTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarSuspensionModern10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarSuspensionModern10"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarSuspensionModern2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarSuspensionModern2"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarSuspensionModern3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarSuspensionModern3"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarSuspensionNormal10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarSuspensionNormal10"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarSuspensionNormal2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarSuspensionNormal2"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarSuspensionNormal3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarSuspensionNormal3"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarTiresModern10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarTiresModern10"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarTiresModern2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarTiresModern2"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarTiresModern3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarTiresModern3"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarTiresNormal10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarTiresNormal10"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarTiresNormal2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarTiresNormal2"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarTiresNormal3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarTiresNormal3"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarWindows10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarWindows10"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarWindows2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarWindows2"].items, 10);
-table.insert(ProceduralDistributions["List"]["CarWindows3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CarWindows3"].items, 10);
-table.insert(ProceduralDistributions["List"]["ChangeroomCounters"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ChangeroomCounters"].items, 10);
-table.insert(ProceduralDistributions["List"]["Chemistry"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Chemistry"].items, 10);
-table.insert(ProceduralDistributions["List"]["ChineseKitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ChineseKitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["ChineseKitchenButcher"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ChineseKitchenButcher"].items, 10);
-table.insert(ProceduralDistributions["List"]["ChineseKitchenCutlery"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ChineseKitchenCutlery"].items, 10);
-table.insert(ProceduralDistributions["List"]["ChineseKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ChineseKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["ChineseKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ChineseKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["ChineseKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ChineseKitchenSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClassroomDesk"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClassroomDesk"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClassroomMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClassroomMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClassroomShelves"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClassroomShelves"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClosetInstruments"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClosetInstruments"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClosetShelfGeneric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClosetShelfGeneric"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingPoor"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingPoor"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStorageAllJackets"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStorageAllJackets"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStorageAllShirts"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStorageAllShirts"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStorageFootwear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStorageFootwear"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStorageHeadwear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStorageHeadwear"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStorageLegwear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStorageLegwear"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStorageWinter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStorageWinter"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresBoots"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresBoots"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresDress"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresDress"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresEyewear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresEyewear"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresGloves"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresGloves"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresGlovesLeather"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresGlovesLeather"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresHeadwear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresHeadwear"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresJackets"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresJackets"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresJacketsFormal"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresJacketsFormal"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresJacketsLeather"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresJacketsLeather"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresJeans"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresJeans"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresJumpers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresJumpers"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresOvershirts"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresOvershirts"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresPants"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresPants"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresPantsFormal"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresPantsFormal"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresPantsLeather"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresPantsLeather"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresShirts"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresShirts"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresShirtsFormal"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresShirtsFormal"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresShoes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresShoes"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresShoesLeather"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresShoesLeather"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresSocks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresSocks"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresSport"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresSport"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresSummer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresSummer"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresUnderwearMan"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresUnderwearMan"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresUnderwearWoman"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresUnderwearWoman"].items, 10);
-table.insert(ProceduralDistributions["List"]["ClothingStoresWoman"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ClothingStoresWoman"].items, 10);
-table.insert(ProceduralDistributions["List"]["ControlRoomCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ControlRoomCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateAntiqueStove"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateAntiqueStove"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateBakingSoda"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateBakingSoda"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateBatteries"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateBatteries"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateBlueComfyChair"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateBlueComfyChair"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateBluePlasticChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateBluePlasticChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateBlueRattanChair"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateBlueRattanChair"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateBooks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateBooks"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateBrownComfyChair"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateBrownComfyChair"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateBrownLowTables"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateBrownLowTables"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateButter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateButter"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCameraFilm"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCameraFilm"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCamping"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCamping"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCandyPackage"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCandyPackage"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCannedFood"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCannedFood"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCannedFoodSpoiled"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCannedFoodSpoiled"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCanning"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCanning"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCarpentry"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCarpentry"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCereal"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCereal"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCharcoal"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCharcoal"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateChips"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateChips"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateChocolate"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateChocolate"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateChocolateChips"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateChocolateChips"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateChromeSinks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateChromeSinks"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCigarettes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCigarettes"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateClothesRandom"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateClothesRandom"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCocoaPowder"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCocoaPowder"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCoffee"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCoffee"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateComics"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateComics"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCompactDiscs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCompactDiscs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateComputer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateComputer"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateConcrete"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateConcrete"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateConesIceCream"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateConesIceCream"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCornflour"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCornflour"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCostume"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCostume"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateCrackers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateCrackers"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateDarkBlueChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateDarkBlueChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateDarkWoodenChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateDarkWoodenChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateDishes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateDishes"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateElectronics"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateElectronics"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateEmptyBottles10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateEmptyBottles10"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateEmptyBottles2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateEmptyBottles2"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateEmptyMixed"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateEmptyMixed"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateEmptyTinCans"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateEmptyTinCans"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFancyBlackChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFancyBlackChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFancyDarkTables"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFancyDarkTables"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFancyLowTables"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFancyLowTables"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFancyToilets"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFancyToilets"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFancyWhiteChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFancyWhiteChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFarming"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFarming"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFertilizer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFertilizer"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFishing"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFishing"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFitnessWeights"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFitnessWeights"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFlour"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFlour"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFoldingChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFoldingChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFootwearRandom"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFootwearRandom"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateFountainCups"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateFountainCups"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateGrahamCrackers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateGrahamCrackers"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateGravelBags"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateGravelBags"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateGravyMix"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateGravyMix"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateGreenChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateGreenChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateGreenComfyChair"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateGreenComfyChair"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateGreenOven"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateGreenOven"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateGreyChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateGreyChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateGreyComfyChair"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateGreyComfyChair"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateGreyOven"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateGreyOven"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateGum"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateGum"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateHotsauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateHotsauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateIndustrialSinks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateIndustrialSinks"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateInstruments"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateInstruments"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateLeather"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateLeather"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateLightRoundTable"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateLightRoundTable"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateLinens"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateLinens"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateLongTables"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateLongTables"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateLumber"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateLumber"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateMagazines"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateMagazines"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateMannequins"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateMannequins"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateMapleSyrup"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateMapleSyrup"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateMaps"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateMaps"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateMapsLarge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateMapsLarge"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateMarinara"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateMarinara"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateMarshmallows"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateMarshmallows"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateMechanics"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateMechanics"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateMetalLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateMetalLockers"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateMetalwork"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateMetalwork"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateModernOven"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateModernOven"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateNewspapers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateNewspapers"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateOakRoundTable"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateOakRoundTable"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateOfficeChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateOfficeChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateOfficeSupplies"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateOfficeSupplies"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateOilOlive"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateOilOlive"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateOilVegetable"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateOilVegetable"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateOrangeModernChair"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateOrangeModernChair"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePaint"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePaint"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePancakeMix"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePancakeMix"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePaperBagJays"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePaperBagJays"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePaperBagSpiffos"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePaperBagSpiffos"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePaperNapkins"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePaperNapkins"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePasta"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePasta"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePeanuts"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePeanuts"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePetSupplies"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePetSupplies"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePlaster"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePlaster"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePlasticChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePlasticChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePlasticLowTables"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePlasticLowTables"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePlasticTrays"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePlasticTrays"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePopcorn"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePopcorn"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePropane"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePropane"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePurpleRattanChair"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePurpleRattanChair"].items, 10);
-table.insert(ProceduralDistributions["List"]["CratePurpleWoodenChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CratePurpleWoodenChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateRandomJunk"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateRandomJunk"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateRedBBQ"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateRedBBQ"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateRedChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateRedChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateRedOven"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateRedOven"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateRedWoodenChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateRedWoodenChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateRice"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateRice"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateRiceVinegar"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateRiceVinegar"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateRoundTable"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateRoundTable"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSalonSupplies"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSalonSupplies"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSandBags"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSandBags"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSeaweed"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSeaweed"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSheetMetal"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSheetMetal"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSmallTables"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSmallTables"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSodaBottles"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSodaBottles"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSodaCans"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSodaCans"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSoysauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSoysauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSpiffoMerch"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSpiffoMerch"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSports"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSports"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSugar"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSugar"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSugarBrown"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSugarBrown"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateSunflowerSeeds"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateSunflowerSeeds"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateTacoShells"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateTacoShells"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateTailoring"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateTailoring"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateTea"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateTea"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateTortillaChips"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateTortillaChips"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateToys"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateToys"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateTV"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateTV"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateTVWide"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateTVWide"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateVHSTapes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateVHSTapes"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateWallets"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateWallets"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateWhiteComfyChair"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateWhiteComfyChair"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateWhiteSimpleChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateWhiteSimpleChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateWhiteSinks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateWhiteSinks"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateWhiteWoodenChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateWhiteWoodenChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateWoodenChairs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateWoodenChairs"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateWoodenStools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateWoodenStools"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateYeast"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateYeast"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrateYellowModernChair"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrateYellowModernChair"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrepeKitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrepeKitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrepeKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrepeKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["CrepeKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["CrepeKitchenSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["DaycareCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DaycareCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["DaycareDesk"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DaycareDesk"].items, 10);
-table.insert(ProceduralDistributions["List"]["DaycareShelves"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DaycareShelves"].items, 10);
-table.insert(ProceduralDistributions["List"]["DeepFryKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DeepFryKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["DeepFryKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DeepFryKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["DepartmentStoreJewelry"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DepartmentStoreJewelry"].items, 10);
-table.insert(ProceduralDistributions["List"]["DepartmentStoreWatches"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DepartmentStoreWatches"].items, 10);
-table.insert(ProceduralDistributions["List"]["DeskGeneric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DeskGeneric"].items, 10);
-table.insert(ProceduralDistributions["List"]["DinerBackRoomCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DinerBackRoomCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["DinerKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DinerKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["DinerKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DinerKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["DishCabinetGeneric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DishCabinetGeneric"].items, 10);
-table.insert(ProceduralDistributions["List"]["DishCabinetLiquor"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DishCabinetLiquor"].items, 10);
-table.insert(ProceduralDistributions["List"]["DogFoodFactoryCans"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DogFoodFactoryCans"].items, 10);
-table.insert(ProceduralDistributions["List"]["DresserGeneric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DresserGeneric"].items, 10);
-table.insert(ProceduralDistributions["List"]["DrugLabGuns"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DrugLabGuns"].items, 10);
-table.insert(ProceduralDistributions["List"]["DrugLabOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DrugLabOutfit"].items, 10);
-table.insert(ProceduralDistributions["List"]["DrugLabSupplies"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DrugLabSupplies"].items, 10);
-table.insert(ProceduralDistributions["List"]["DrugShackDrugs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DrugShackDrugs"].items, 10);
-table.insert(ProceduralDistributions["List"]["DrugShackMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DrugShackMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["DrugShackTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DrugShackTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["DrugShackWeapons"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["DrugShackWeapons"].items, 10);
-table.insert(ProceduralDistributions["List"]["ElectronicStoreAppliances"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ElectronicStoreAppliances"].items, 10);
-table.insert(ProceduralDistributions["List"]["ElectronicStoreComputers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ElectronicStoreComputers"].items, 10);
-table.insert(ProceduralDistributions["List"]["ElectronicStoreHAMRadio"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ElectronicStoreHAMRadio"].items, 10);
-table.insert(ProceduralDistributions["List"]["ElectronicStoreLights"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ElectronicStoreLights"].items, 10);
-table.insert(ProceduralDistributions["List"]["ElectronicStoreMagazines"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ElectronicStoreMagazines"].items, 10);
-table.insert(ProceduralDistributions["List"]["ElectronicStoreMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ElectronicStoreMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["ElectronicStoreMusic"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ElectronicStoreMusic"].items, 10);
-table.insert(ProceduralDistributions["List"]["Empty"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Empty"].items, 10);
-table.insert(ProceduralDistributions["List"]["EngineerTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["EngineerTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["FactoryLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FactoryLockers"].items, 10);
-table.insert(ProceduralDistributions["List"]["FilingCabinetGeneric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FilingCabinetGeneric"].items, 10);
-table.insert(ProceduralDistributions["List"]["FirearmWeapons"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FirearmWeapons"].items, 10);
-table.insert(ProceduralDistributions["List"]["FireDeptLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FireDeptLockers"].items, 10);
-table.insert(ProceduralDistributions["List"]["FireStorageOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FireStorageOutfit"].items, 10);
-table.insert(ProceduralDistributions["List"]["FireStorageTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FireStorageTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["FishChipsKitchenButcher"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FishChipsKitchenButcher"].items, 10);
-table.insert(ProceduralDistributions["List"]["FishChipsKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FishChipsKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["FishChipsKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FishChipsKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["FishChipsKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FishChipsKitchenSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["FishingStoreBait"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FishingStoreBait"].items, 10);
-table.insert(ProceduralDistributions["List"]["FishingStoreGear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FishingStoreGear"].items, 10);
-table.insert(ProceduralDistributions["List"]["FitnessTrainer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FitnessTrainer"].items, 10);
-table.insert(ProceduralDistributions["List"]["FoodGourmet"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FoodGourmet"].items, 10);
-table.insert(ProceduralDistributions["List"]["ForestFireTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ForestFireTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["FreezerGeneric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FreezerGeneric"].items, 10);
-table.insert(ProceduralDistributions["List"]["FreezerIceCream"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FreezerIceCream"].items, 10);
-table.insert(ProceduralDistributions["List"]["FreezerRich"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FreezerRich"].items, 10);
-table.insert(ProceduralDistributions["List"]["FreezerTrailerPark"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FreezerTrailerPark"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeBeer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeBeer"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeBottles"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeBottles"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeBreakRoom"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeBreakRoom"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeGeneric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeGeneric"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeOffice"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeOffice"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeOther"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeOther"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeRich"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeRich"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeSnacks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeSnacks"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeSoda"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeSoda"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeTrailerPark"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeTrailerPark"].items, 10);
-table.insert(ProceduralDistributions["List"]["FridgeWater"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FridgeWater"].items, 10);
-table.insert(ProceduralDistributions["List"]["FryFactoryPotatoes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["FryFactoryPotatoes"].items, 10);
-table.insert(ProceduralDistributions["List"]["GarageCarpentry"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GarageCarpentry"].items, 10);
-table.insert(ProceduralDistributions["List"]["GarageFirearms"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GarageFirearms"].items, 10);
-table.insert(ProceduralDistributions["List"]["GarageMechanics"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GarageMechanics"].items, 10);
-table.insert(ProceduralDistributions["List"]["GarageMetalwork"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GarageMetalwork"].items, 10);
-table.insert(ProceduralDistributions["List"]["GarageTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GarageTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["GardenStoreMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GardenStoreMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["GardenStoreTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GardenStoreTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["GasStorageCombo"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GasStorageCombo"].items, 10);
-table.insert(ProceduralDistributions["List"]["GasStorageMechanics"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GasStorageMechanics"].items, 10);
-table.insert(ProceduralDistributions["List"]["GeneratorRoom"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GeneratorRoom"].items, 10);
-table.insert(ProceduralDistributions["List"]["Gifts"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Gifts"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartBakingMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartBakingMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartBedding"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartBedding"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartBottles"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartBottles"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartCandy"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartCandy"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartCannedFood"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartCannedFood"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartCrisps"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartCrisps"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartDryGoods"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartDryGoods"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartFarming"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartFarming"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartHouseElectronics"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartHouseElectronics"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartHousewares"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartHousewares"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartLightbulb"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartLightbulb"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartPots"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartPots"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartSchool"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartSchool"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["GigamartToys"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GigamartToys"].items, 10);
-table.insert(ProceduralDistributions["List"]["GolfLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GolfLockers"].items, 10);
-table.insert(ProceduralDistributions["List"]["GrillAcessories"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GrillAcessories"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStandFruits10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStandFruits10"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStandFruits2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStandFruits2"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStandFruits3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStandFruits3"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStandLettuce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStandLettuce"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStandVegetables10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStandVegetables10"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStandVegetables2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStandVegetables2"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStandVegetables3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStandVegetables3"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStandVegetables4"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStandVegetables4"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStorageCrate10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStorageCrate10"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStorageCrate2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStorageCrate2"].items, 10);
-table.insert(ProceduralDistributions["List"]["GroceryStorageCrate3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GroceryStorageCrate3"].items, 10);
-table.insert(ProceduralDistributions["List"]["GunStoreAmmunition"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GunStoreAmmunition"].items, 10);
-table.insert(ProceduralDistributions["List"]["GunStoreCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GunStoreCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["GunStoreDisplayCase"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GunStoreDisplayCase"].items, 10);
-table.insert(ProceduralDistributions["List"]["GunStoreMagazineRack"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GunStoreMagazineRack"].items, 10);
-table.insert(ProceduralDistributions["List"]["GunStoreShelf"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GunStoreShelf"].items, 10);
-table.insert(ProceduralDistributions["List"]["GymLaundry"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GymLaundry"].items, 10);
-table.insert(ProceduralDistributions["List"]["GymLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GymLockers"].items, 10);
-table.insert(ProceduralDistributions["List"]["GymSweatbands"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GymSweatbands"].items, 10);
-table.insert(ProceduralDistributions["List"]["GymTowels"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GymTowels"].items, 10);
-table.insert(ProceduralDistributions["List"]["GymWeights"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["GymWeights"].items, 10);
-table.insert(ProceduralDistributions["List"]["Hiker"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Hiker"].items, 10);
-table.insert(ProceduralDistributions["List"]["Hobbies"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Hobbies"].items, 10);
-table.insert(ProceduralDistributions["List"]["HolidayStuff"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["HolidayStuff"].items, 10);
-table.insert(ProceduralDistributions["List"]["Homesteading"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Homesteading"].items, 10);
-table.insert(ProceduralDistributions["List"]["HospitalLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["HospitalLockers"].items, 10);
-table.insert(ProceduralDistributions["List"]["Hunter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Hunter"].items, 10);
-table.insert(ProceduralDistributions["List"]["HuntingLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["HuntingLockers"].items, 10);
-table.insert(ProceduralDistributions["List"]["ImprovisedCrafts"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ImprovisedCrafts"].items, 10);
-table.insert(ProceduralDistributions["List"]["ItalianKitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ItalianKitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["ItalianKitchenButcher"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ItalianKitchenButcher"].items, 10);
-table.insert(ProceduralDistributions["List"]["ItalianKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ItalianKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["ItalianKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ItalianKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["JanitorChemicals"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JanitorChemicals"].items, 10);
-table.insert(ProceduralDistributions["List"]["JanitorCleaning"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JanitorCleaning"].items, 10);
-table.insert(ProceduralDistributions["List"]["JanitorMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JanitorMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["JanitorTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JanitorTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["JaysDiningCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JaysDiningCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["JaysKitchenBags"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JaysKitchenBags"].items, 10);
-table.insert(ProceduralDistributions["List"]["JaysKitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JaysKitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["JaysKitchenButcher"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JaysKitchenButcher"].items, 10);
-table.insert(ProceduralDistributions["List"]["JaysKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JaysKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["JaysKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JaysKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["JaysKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JaysKitchenSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["JewelryGems"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JewelryGems"].items, 10);
-table.insert(ProceduralDistributions["List"]["JewelryGold"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JewelryGold"].items, 10);
-table.insert(ProceduralDistributions["List"]["JewelryNavelRings"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JewelryNavelRings"].items, 10);
-table.insert(ProceduralDistributions["List"]["JewelryOthers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JewelryOthers"].items, 10);
-table.insert(ProceduralDistributions["List"]["JewelrySilver"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JewelrySilver"].items, 10);
-table.insert(ProceduralDistributions["List"]["JewelryStorageAll"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JewelryStorageAll"].items, 10);
-table.insert(ProceduralDistributions["List"]["JewelryWeddingRings"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JewelryWeddingRings"].items, 10);
-table.insert(ProceduralDistributions["List"]["JewelryWrist"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JewelryWrist"].items, 10);
-table.insert(ProceduralDistributions["List"]["JunkBin"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JunkBin"].items, 10);
-table.insert(ProceduralDistributions["List"]["JunkHoard"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["JunkHoard"].items, 10);
-table.insert(ProceduralDistributions["List"]["KitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["KitchenBook"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KitchenBook"].items, 10);
-table.insert(ProceduralDistributions["List"]["KitchenBottles"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KitchenBottles"].items, 10);
-table.insert(ProceduralDistributions["List"]["KitchenBreakfast"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KitchenBreakfast"].items, 10);
-table.insert(ProceduralDistributions["List"]["KitchenCannedFood"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KitchenCannedFood"].items, 10);
-table.insert(ProceduralDistributions["List"]["KitchenDishes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KitchenDishes"].items, 10);
-table.insert(ProceduralDistributions["List"]["KitchenDryFood"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KitchenDryFood"].items, 10);
-table.insert(ProceduralDistributions["List"]["KitchenPots"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KitchenPots"].items, 10);
-table.insert(ProceduralDistributions["List"]["KitchenRandom"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KitchenRandom"].items, 10);
-table.insert(ProceduralDistributions["List"]["KnifeFactoryCutlery"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KnifeFactoryCutlery"].items, 10);
-table.insert(ProceduralDistributions["List"]["KnifeFactoryKitchenKnife"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KnifeFactoryKitchenKnife"].items, 10);
-table.insert(ProceduralDistributions["List"]["KnifeFactoryMeatCleaver"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["KnifeFactoryMeatCleaver"].items, 10);
-table.insert(ProceduralDistributions["List"]["LaundryCleaning"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LaundryCleaning"].items, 10);
-table.insert(ProceduralDistributions["List"]["LaundryHospital"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LaundryHospital"].items, 10);
-table.insert(ProceduralDistributions["List"]["LaundryLoad10"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LaundryLoad10"].items, 10);
-table.insert(ProceduralDistributions["List"]["LaundryLoad2"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LaundryLoad2"].items, 10);
-table.insert(ProceduralDistributions["List"]["LaundryLoad3"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LaundryLoad3"].items, 10);
-table.insert(ProceduralDistributions["List"]["LaundryLoad4"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LaundryLoad4"].items, 10);
-table.insert(ProceduralDistributions["List"]["LaundryLoad5"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LaundryLoad5"].items, 10);
-table.insert(ProceduralDistributions["List"]["LaundryLoad6"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LaundryLoad6"].items, 10);
-table.insert(ProceduralDistributions["List"]["LaundryLoad7"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LaundryLoad7"].items, 10);
-table.insert(ProceduralDistributions["List"]["LaundryLoad8"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LaundryLoad8"].items, 10);
-table.insert(ProceduralDistributions["List"]["LibraryBooks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LibraryBooks"].items, 10);
-table.insert(ProceduralDistributions["List"]["LibraryCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LibraryCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["LingerieStoreAccessories"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LingerieStoreAccessories"].items, 10);
-table.insert(ProceduralDistributions["List"]["LingerieStoreBras"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LingerieStoreBras"].items, 10);
-table.insert(ProceduralDistributions["List"]["LingerieStoreOutfits"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LingerieStoreOutfits"].items, 10);
-table.insert(ProceduralDistributions["List"]["LingerieStoreUnderwear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LingerieStoreUnderwear"].items, 10);
-table.insert(ProceduralDistributions["List"]["LivingRoomShelf"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LivingRoomShelf"].items, 10);
-table.insert(ProceduralDistributions["List"]["LivingRoomShelfNoTapes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LivingRoomShelfNoTapes"].items, 10);
-table.insert(ProceduralDistributions["List"]["LivingRoomSideTable"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LivingRoomSideTable"].items, 10);
-table.insert(ProceduralDistributions["List"]["LivingRoomSideTableNoRemote"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LivingRoomSideTableNoRemote"].items, 10);
-table.insert(ProceduralDistributions["List"]["Locker"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Locker"].items, 10);
-table.insert(ProceduralDistributions["List"]["LockerArmyBedroom"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LockerArmyBedroom"].items, 10);
-table.insert(ProceduralDistributions["List"]["LockerClassy"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LockerClassy"].items, 10);
-table.insert(ProceduralDistributions["List"]["LoggingFactoryTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["LoggingFactoryTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["MagazineRackMaps"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MagazineRackMaps"].items, 10);
-table.insert(ProceduralDistributions["List"]["MagazineRackMixed"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MagazineRackMixed"].items, 10);
-table.insert(ProceduralDistributions["List"]["MagazineRackNewspaper"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MagazineRackNewspaper"].items, 10);
-table.insert(ProceduralDistributions["List"]["Meat"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Meat"].items, 10);
-table.insert(ProceduralDistributions["List"]["MechanicShelfBooks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MechanicShelfBooks"].items, 10);
-table.insert(ProceduralDistributions["List"]["MechanicShelfBrakes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MechanicShelfBrakes"].items, 10);
-table.insert(ProceduralDistributions["List"]["MechanicShelfElectric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MechanicShelfElectric"].items, 10);
-table.insert(ProceduralDistributions["List"]["MechanicShelfMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MechanicShelfMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["MechanicShelfMufflers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MechanicShelfMufflers"].items, 10);
-table.insert(ProceduralDistributions["List"]["MechanicShelfOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MechanicShelfOutfit"].items, 10);
-table.insert(ProceduralDistributions["List"]["MechanicShelfSuspension"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MechanicShelfSuspension"].items, 10);
-table.insert(ProceduralDistributions["List"]["MechanicShelfTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MechanicShelfTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["MechanicShelfWheels"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MechanicShelfWheels"].items, 10);
-table.insert(ProceduralDistributions["List"]["MechanicSpecial"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MechanicSpecial"].items, 10);
-table.insert(ProceduralDistributions["List"]["MedicalClinicDrugs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MedicalClinicDrugs"].items, 10);
-table.insert(ProceduralDistributions["List"]["MedicalClinicOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MedicalClinicOutfit"].items, 10);
-table.insert(ProceduralDistributions["List"]["MedicalClinicTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MedicalClinicTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["MedicalOfficeBooks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MedicalOfficeBooks"].items, 10);
-table.insert(ProceduralDistributions["List"]["MedicalStorageDrugs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MedicalStorageDrugs"].items, 10);
-table.insert(ProceduralDistributions["List"]["MedicalStorageOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MedicalStorageOutfit"].items, 10);
-table.insert(ProceduralDistributions["List"]["MedicalStorageTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MedicalStorageTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["MeleeWeapons"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MeleeWeapons"].items, 10);
-table.insert(ProceduralDistributions["List"]["MetalShopTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MetalShopTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["MexicanKitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MexicanKitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["MexicanKitchenButcher"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MexicanKitchenButcher"].items, 10);
-table.insert(ProceduralDistributions["List"]["MexicanKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MexicanKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["MexicanKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MexicanKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["MexicanKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MexicanKitchenSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["MorgueChemicals"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MorgueChemicals"].items, 10);
-table.insert(ProceduralDistributions["List"]["MorgueOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MorgueOutfit"].items, 10);
-table.insert(ProceduralDistributions["List"]["MorgueTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MorgueTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["MotelFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MotelFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["MotelLinens"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MotelLinens"].items, 10);
-table.insert(ProceduralDistributions["List"]["MotelTowels"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MotelTowels"].items, 10);
-table.insert(ProceduralDistributions["List"]["MovieRentalShelves"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MovieRentalShelves"].items, 10);
-table.insert(ProceduralDistributions["List"]["MusicStoreBass"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MusicStoreBass"].items, 10);
-table.insert(ProceduralDistributions["List"]["MusicStoreCases"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MusicStoreCases"].items, 10);
-table.insert(ProceduralDistributions["List"]["MusicStoreCDs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MusicStoreCDs"].items, 10);
-table.insert(ProceduralDistributions["List"]["MusicStoreGuitar"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MusicStoreGuitar"].items, 10);
-table.insert(ProceduralDistributions["List"]["MusicStoreOthers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MusicStoreOthers"].items, 10);
-table.insert(ProceduralDistributions["List"]["MusicStoreSpeaker"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["MusicStoreSpeaker"].items, 10);
-table.insert(ProceduralDistributions["List"]["OfficeCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["OfficeCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["OfficeDesk"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["OfficeDesk"].items, 10);
-table.insert(ProceduralDistributions["List"]["OfficeDeskHome"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["OfficeDeskHome"].items, 10);
-table.insert(ProceduralDistributions["List"]["OfficeDrawers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["OfficeDrawers"].items, 10);
-table.insert(ProceduralDistributions["List"]["OfficeShelfSupplies"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["OfficeShelfSupplies"].items, 10);
-table.insert(ProceduralDistributions["List"]["OptometristGlasses"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["OptometristGlasses"].items, 10);
-table.insert(ProceduralDistributions["List"]["OtherGeneric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["OtherGeneric"].items, 10);
-table.insert(ProceduralDistributions["List"]["PawnShopCases"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PawnShopCases"].items, 10);
-table.insert(ProceduralDistributions["List"]["PawnShopGuns"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PawnShopGuns"].items, 10);
-table.insert(ProceduralDistributions["List"]["PawnShopGunsSpecial"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PawnShopGunsSpecial"].items, 10);
-table.insert(ProceduralDistributions["List"]["PawnShopKnives"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PawnShopKnives"].items, 10);
-table.insert(ProceduralDistributions["List"]["PetShopShelf"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PetShopShelf"].items, 10);
-table.insert(ProceduralDistributions["List"]["PharmacyCosmetics"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PharmacyCosmetics"].items, 10);
-table.insert(ProceduralDistributions["List"]["Photographer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Photographer"].items, 10);
-table.insert(ProceduralDistributions["List"]["PizzaKitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PizzaKitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["PizzaKitchenButcher"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PizzaKitchenButcher"].items, 10);
-table.insert(ProceduralDistributions["List"]["PizzaKitchenCheese"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PizzaKitchenCheese"].items, 10);
-table.insert(ProceduralDistributions["List"]["PizzaKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PizzaKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["PizzaKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PizzaKitchenSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["PlankStashGun"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PlankStashGun"].items, 10);
-table.insert(ProceduralDistributions["List"]["PlankStashMagazine"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PlankStashMagazine"].items, 10);
-table.insert(ProceduralDistributions["List"]["PlankStashMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PlankStashMisc"].items, 100);
-table.insert(ProceduralDistributions["List"]["PlankStashMoney"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PlankStashMoney"].items, 100);
-table.insert(ProceduralDistributions["List"]["PlumbingSupplies"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PlumbingSupplies"].items, 100);
-table.insert(ProceduralDistributions["List"]["PoliceDesk"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PoliceDesk"].items, 100);
-table.insert(ProceduralDistributions["List"]["PoliceEvidence"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PoliceEvidence"].items, 100);
-table.insert(ProceduralDistributions["List"]["PoliceLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PoliceLockers"].items, 100);
-table.insert(ProceduralDistributions["List"]["PoliceStorageAmmunition"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PoliceStorageAmmunition"].items, 100);
-table.insert(ProceduralDistributions["List"]["PoliceStorageGuns"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PoliceStorageGuns"].items, 100);
-table.insert(ProceduralDistributions["List"]["PoliceStorageOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PoliceStorageOutfit"].items, 100);
-table.insert(ProceduralDistributions["List"]["PoolLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PoolLockers"].items, 100);
-table.insert(ProceduralDistributions["List"]["PostOfficeBooks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PostOfficeBooks"].items, 100);
-table.insert(ProceduralDistributions["List"]["PostOfficeBoxes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PostOfficeBoxes"].items, 100);
-table.insert(ProceduralDistributions["List"]["PostOfficeMagazines"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PostOfficeMagazines"].items, 100);
-table.insert(ProceduralDistributions["List"]["PostOfficeNewspapers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PostOfficeNewspapers"].items, 100);
-table.insert(ProceduralDistributions["List"]["PostOfficeSupplies"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PostOfficeSupplies"].items, 100);
-table.insert(ProceduralDistributions["List"]["PrisonCellRandom"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PrisonCellRandom"].items, 100);
-table.insert(ProceduralDistributions["List"]["PrisonGuardLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["PrisonGuardLockers"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageApples"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageApples"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageBellPeppers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageBellPeppers"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageBroccoli"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageBroccoli"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageCabbages"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageCabbages"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageCarrots"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageCarrots"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageCherries"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageCherries"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageCorn"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageCorn"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageEggplant"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageEggplant"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageLeeks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageLeeks"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageLettuce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageLettuce"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageOnions"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageOnions"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStoragePeaches"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStoragePeaches"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStoragePear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStoragePear"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStoragePotatoes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStoragePotatoes"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageRadishes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageRadishes"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageStrawberries"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageStrawberries"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageTomatoes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageTomatoes"].items, 100);
-table.insert(ProceduralDistributions["List"]["ProduceStorageWatermelons"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ProduceStorageWatermelons"].items, 100);
-table.insert(ProceduralDistributions["List"]["RadioFactoryComponents"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["RadioFactoryComponents"].items, 100);
-table.insert(ProceduralDistributions["List"]["RandomFiller"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["RandomFiller"].items, 100);
-table.insert(ProceduralDistributions["List"]["RestaurantKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["RestaurantKitchenFreezer"].items, 100);
-table.insert(ProceduralDistributions["List"]["RestaurantKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["RestaurantKitchenFridge"].items, 100);
-table.insert(ProceduralDistributions["List"]["SafehouseArmor"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SafehouseArmor"].items, 100);
-table.insert(ProceduralDistributions["List"]["SafehouseMedical"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SafehouseMedical"].items, 100);
-table.insert(ProceduralDistributions["List"]["SafehouseTraps"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SafehouseTraps"].items, 100);
-table.insert(ProceduralDistributions["List"]["SalonCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SalonCounter"].items, 100);
-table.insert(ProceduralDistributions["List"]["SalonShelfHaircare"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SalonShelfHaircare"].items, 100);
-table.insert(ProceduralDistributions["List"]["SalonShelfTowels"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SalonShelfTowels"].items, 100);
-table.insert(ProceduralDistributions["List"]["SchoolLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SchoolLockers"].items, 100);
-table.insert(ProceduralDistributions["List"]["ScienceMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ScienceMisc"].items, 100);
-table.insert(ProceduralDistributions["List"]["SeafoodKitchenButcher"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SeafoodKitchenButcher"].items, 100);
-table.insert(ProceduralDistributions["List"]["SeafoodKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SeafoodKitchenFreezer"].items, 100);
-table.insert(ProceduralDistributions["List"]["SeafoodKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SeafoodKitchenFridge"].items, 100);
-table.insert(ProceduralDistributions["List"]["SeafoodKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SeafoodKitchenSauce"].items, 100);
-table.insert(ProceduralDistributions["List"]["SecurityLockers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SecurityLockers"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayBiscuits"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayBiscuits"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayBurgers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayBurgers"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayBurritos"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayBurritos"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayChicken"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayChicken"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayChickenNuggets"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayChickenNuggets"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayCornbread"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayCornbread"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayFish"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayFish"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayFries"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayFries"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayGravy"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayGravy"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayHotdogs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayHotdogs"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayMaki"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayMaki"].items, 100);
-table.insert(ProceduralDistributions["List"]["ServingTrayMeatDumplings"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayMeatDumplings"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayMeatSteamBuns"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayMeatSteamBuns"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayNoodleSoup"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayNoodleSoup"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayOmelettes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayOmelettes"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayOnigiri"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayOnigiri"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayOnionRings"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayOnionRings"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayOysters"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayOysters"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayPancakes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayPancakes"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayPerogies"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayPerogies"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayPie"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayPie"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayPizza"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayPizza"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayPotatoPancakes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayPotatoPancakes"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayRefriedBeans"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayRefriedBeans"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayScrambledEggs"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayScrambledEggs"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayShrimp"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayShrimp"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayShrimpDumplings"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayShrimpDumplings"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTraySpringRolls"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTraySpringRolls"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTraySushiEgg"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTraySushiEgg"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTraySushiFish"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTraySushiFish"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayTaco"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayTaco"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayTofuFried"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayTofuFried"].items, 10);
-table.insert(ProceduralDistributions["List"]["ServingTrayWaffles"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ServingTrayWaffles"].items, 10);
-table.insert(ProceduralDistributions["List"]["SewingStoreFabric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SewingStoreFabric"].items, 10);
-table.insert(ProceduralDistributions["List"]["SewingStoreTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SewingStoreTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["ShelfGeneric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ShelfGeneric"].items, 10);
-table.insert(ProceduralDistributions["List"]["SpiffosDiningCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SpiffosDiningCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["SpiffosKitchenBags"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SpiffosKitchenBags"].items, 10);
-table.insert(ProceduralDistributions["List"]["SpiffosKitchenCounter"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SpiffosKitchenCounter"].items, 10);
-table.insert(ProceduralDistributions["List"]["SpiffosKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SpiffosKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["SpiffosKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SpiffosKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["SportStorageBalls"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SportStorageBalls"].items, 10);
-table.insert(ProceduralDistributions["List"]["SportStorageBats"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SportStorageBats"].items, 10);
-table.insert(ProceduralDistributions["List"]["SportStorageHelmets"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SportStorageHelmets"].items, 10);
-table.insert(ProceduralDistributions["List"]["SportStoragePaddles"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SportStoragePaddles"].items, 10);
-table.insert(ProceduralDistributions["List"]["SportStorageRacquets"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SportStorageRacquets"].items, 10);
-table.insert(ProceduralDistributions["List"]["SportStorageSticks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SportStorageSticks"].items, 10);
-table.insert(ProceduralDistributions["List"]["SportStoreSneakers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SportStoreSneakers"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreCounterBags"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreCounterBags"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreCounterBagsFancy"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreCounterBagsFancy"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreCounterCleaning"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreCounterCleaning"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreCounterTobacco"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreCounterTobacco"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreDisplayWatches"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreDisplayWatches"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenBags"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenBags"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenButcher"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenButcher"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenCafe"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenCafe"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenCups"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenCups"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenCutlery"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenCutlery"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenDishes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenDishes"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenGlasses"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenGlasses"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenPotatoes"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenPotatoes"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenPots"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenPots"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreKitchenTrays"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreKitchenTrays"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreShelfBeer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreShelfBeer"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreShelfCombo"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreShelfCombo"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreShelfDrinks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreShelfDrinks"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreShelfElectronics"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreShelfElectronics"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreShelfMechanics"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreShelfMechanics"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreShelfMedical"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreShelfMedical"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreShelfSnacks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreShelfSnacks"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreShelfSpices"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreShelfSpices"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreShelfWhiskey"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreShelfWhiskey"].items, 10);
-table.insert(ProceduralDistributions["List"]["StoreShelfWine"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StoreShelfWine"].items, 10);
-table.insert(ProceduralDistributions["List"]["StripClubDressers"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["StripClubDressers"].items, 10);
-table.insert(ProceduralDistributions["List"]["SurvivalGear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SurvivalGear"].items, 10);
-table.insert(ProceduralDistributions["List"]["SushiKitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SushiKitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["SushiKitchenCutlery"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SushiKitchenCutlery"].items, 10);
-table.insert(ProceduralDistributions["List"]["SushiKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SushiKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["SushiKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SushiKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["SushiKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["SushiKitchenSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["TestingLab"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["TestingLab"].items, 10);
-table.insert(ProceduralDistributions["List"]["TheatreDrinks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["TheatreDrinks"].items, 10);
-table.insert(ProceduralDistributions["List"]["TheatreKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["TheatreKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["TheatrePopcorn"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["TheatrePopcorn"].items, 10);
-table.insert(ProceduralDistributions["List"]["TheatreSnacks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["TheatreSnacks"].items, 10);
-table.insert(ProceduralDistributions["List"]["ToolStoreAccessories"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ToolStoreAccessories"].items, 10);
-table.insert(ProceduralDistributions["List"]["ToolStoreBooks"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ToolStoreBooks"].items, 10);
-table.insert(ProceduralDistributions["List"]["ToolStoreCarpentry"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ToolStoreCarpentry"].items, 10);
-table.insert(ProceduralDistributions["List"]["ToolStoreFarming"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ToolStoreFarming"].items, 10);
-table.insert(ProceduralDistributions["List"]["ToolStoreFootwear"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ToolStoreFootwear"].items, 10);
-table.insert(ProceduralDistributions["List"]["ToolStoreMetalwork"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ToolStoreMetalwork"].items, 10);
-table.insert(ProceduralDistributions["List"]["ToolStoreMisc"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ToolStoreMisc"].items, 10);
-table.insert(ProceduralDistributions["List"]["ToolStoreOutfit"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ToolStoreOutfit"].items, 10);
-table.insert(ProceduralDistributions["List"]["ToolStoreTools"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ToolStoreTools"].items, 10);
-table.insert(ProceduralDistributions["List"]["Trapper"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["Trapper"].items, 10);
-table.insert(ProceduralDistributions["List"]["VacationStuff"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["VacationStuff"].items, 10);
-table.insert(ProceduralDistributions["List"]["WallDecor"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WallDecor"].items, 10);
-table.insert(ProceduralDistributions["List"]["WardrobeChild"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WardrobeChild"].items, 10);
-table.insert(ProceduralDistributions["List"]["WardrobeMan"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WardrobeMan"].items, 10);
-table.insert(ProceduralDistributions["List"]["WardrobeManClassy"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WardrobeManClassy"].items, 10);
-table.insert(ProceduralDistributions["List"]["WardrobeRedneck"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WardrobeRedneck"].items, 10);
-table.insert(ProceduralDistributions["List"]["WardrobeWoman"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WardrobeWoman"].items, 10);
-table.insert(ProceduralDistributions["List"]["WardrobeWomanClassy"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WardrobeWomanClassy"].items, 10);
-table.insert(ProceduralDistributions["List"]["WesternKitchenBaking"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WesternKitchenBaking"].items, 10);
-table.insert(ProceduralDistributions["List"]["WesternKitchenButcher"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WesternKitchenButcher"].items, 10);
-table.insert(ProceduralDistributions["List"]["WesternKitchenFreezer"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WesternKitchenFreezer"].items, 10);
-table.insert(ProceduralDistributions["List"]["WesternKitchenFridge"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WesternKitchenFridge"].items, 10);
-table.insert(ProceduralDistributions["List"]["WesternKitchenSauce"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WesternKitchenSauce"].items, 10);
-table.insert(ProceduralDistributions["List"]["WhiskeyBottlingEmpty"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WhiskeyBottlingEmpty"].items, 10);
-table.insert(ProceduralDistributions["List"]["WhiskeyBottlingFull"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WhiskeyBottlingFull"].items, 10);
-table.insert(ProceduralDistributions["List"]["WireFactoryBarbed"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WireFactoryBarbed"].items, 10);
-table.insert(ProceduralDistributions["List"]["WireFactoryBasic"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WireFactoryBasic"].items, 10);
-table.insert(ProceduralDistributions["List"]["WireFactoryElectric"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["WireFactoryElectric"].items, 10);
-table.insert(ProceduralDistributions["List"]["ZippeeClothing"].items, "Base.NWDriedMeatPackage");
-table.insert(ProceduralDistributions["List"]["ZippeeClothing"].items, 10);
+local ItemDist = {
+    -- Dried Meats Package
+    {
+        Distributions = {
+            {"Antiques", 10},
+            {"ArmyHangarOutfit", 10},
+            {"ArmyHangarTools", 10},
+            {"ArmyStorageAmmunition", 10},
+            {"ArmyStorageElectronics", 10},
+            {"ArmyStorageGuns", 10},
+            {"ArmyStorageMedical", 10},
+            {"ArmyStorageOutfit", 10},
+            {"ArmySurplusBackpacks", 10},
+            {"ArmySurplusFootwear", 10},
+            {"ArmySurplusHeadwear", 10},
+            {"ArmySurplusMisc", 10},
+            {"ArmySurplusOutfit", 10},
+            {"ArmySurplusTools", 10},
+            {"ArtStoreOther", 10},
+            {"ArtStorePaper", 10},
+            {"ArtStorePen", 10},
+            {"ArtSupplies", 10},
+            {"Bakery", 10},
+            {"BakeryBread", 10},
+            {"BakeryCake", 10},
+            {"BakeryDoughnuts", 10},
+            {"BakeryKitchenBaking", 10},
+            {"BakeryKitchenFreezer", 10},
+            {"BakeryKitchenFridge", 10},
+            {"BakeryMisc", 10},
+            {"BakeryPie", 10},
+            {"BandMerchClothes", 10},
+            {"BandMerchShelves", 10},
+            {"BandPracticeClothing", 10},
+            {"BandPracticeFridge", 10},
+            {"BandPracticeInstruments", 10},
+            {"BarCounterGlasses", 10},
+            {"BarCounterLiquor", 10},
+            {"BarCounterMisc", 10},
+            {"BarCounterWeapon", 10},
+            {"BarCrateDarts", 10},
+            {"BarCratePool", 10},
+            {"BarShelfLiquor", 10},
+            {"BaseballStoreShelves", 10},
+            {"BatFactoryBats", 10},
+            {"BathroomCabinet", 10},
+            {"BathroomCounter", 10},
+            {"BathroomCounterEmpty", 10},
+            {"BathroomCounterNoMeds", 10},
+            {"BathroomShelf", 10},
+            {"BedroomDresser", 10},
+            {"BedroomSideTable", 10},
+            {"BinBar", 10},
+            {"BinDumpster", 10},
+            {"BinGeneric", 10},
+            {"BookstoreBags", 10},
+            {"BookstoreBooks", 10},
+            {"BookstoreMisc", 10},
+            {"BookstoreStationery", 10},
+            {"BowlingAlleyLockers", 10},
+            {"BowlingAlleyShoes", 10},
+            {"BreakRoomCounter", 10},
+            {"BreakRoomShelves", 10},
+            {"BreweryBottles", 10},
+            {"BreweryCans", 10},
+            {"BreweryEmptyBottles", 10},
+            {"BurgerKitchenButcher", 10},
+            {"BurgerKitchenFreezer", 10},
+            {"BurgerKitchenFridge", 10},
+            {"BurgerKitchenSauce", 10},
+            {"BurglarTools", 10},
+            {"ButcherChicken", 10},
+            {"ButcherChops", 10},
+            {"ButcherFish", 10},
+            {"ButcherFreezer", 10},
+            {"ButcherGround", 10},
+            {"ButcherSmoked", 10},
+            {"ButcherSnacks", 10},
+            {"ButcherTools", 10},
+            {"CabinetFactoryTools", 10},
+            {"CafeKitchenFridge", 10},
+            {"CafeShelfBooks", 10},
+            {"CafeteriaDrinks", 10},
+            {"CafeteriaFruit", 10},
+            {"CafeteriaSandwiches", 10},
+            {"CafeteriaSnacks", 10},
+            {"CameraStoreDisplayCase", 10},
+            {"CameraStoreShelves", 10},
+            {"CampingLockers", 10},
+            {"CampingStoreBackpacks", 10},
+            {"CampingStoreBooks", 10},
+            {"CampingStoreClothes", 10},
+            {"CampingStoreGear", 10},
+            {"CampingStoreLegwear", 10},
+            {"CandyStoreSnacks", 10},
+            {"CarSupplyTools", 10},
+            {"CarBrakesModern1", 10},
+            {"CarBrakesModern2", 10},
+            {"CarBrakesModern3", 10},
+            {"CarBrakesNormal1", 10},
+            {"CarBrakesNormal2", 10},
+            {"CarBrakesNormal3", 10},
+            {"CarSuspensionModern1", 10},
+            {"CarSuspensionModern2", 10},
+            {"CarSuspensionModern3", 10},
+            {"CarSuspensionNormal1", 10},
+            {"CarSuspensionNormal2", 10},
+            {"CarSuspensionNormal3", 10},
+            {"CarTiresModern1", 10},
+            {"CarTiresModern2", 10},
+            {"CarTiresModern3", 10},
+            {"CarTiresNormal1", 10},
+            {"CarTiresNormal2", 10},
+            {"CarTiresNormal3", 10},
+            {"CarWindows1", 10},
+            {"CarWindows2", 10},
+            {"CarWindows3", 10},
+            {"ChangeroomCounters", 10},
+            {"Chemistry", 10},
+            {"ChineseKitchenBaking", 10},
+            {"ChineseKitchenButcher", 10},
+            {"ChineseKitchenCutlery", 10},
+            {"ChineseKitchenFreezer", 10},
+            {"ChineseKitchenFridge", 10},
+            {"ChineseKitchenSauce", 10},
+            {"ClassroomDesk", 10},
+            {"ClassroomMisc", 10},
+            {"ClassroomShelves", 10},
+            {"ClosetInstruments", 10},
+            {"ClosetShelfGeneric", 10},
+            {"ClothingPoor", 10},
+            {"ClothingStorageAllJackets", 10},
+            {"ClothingStorageAllShirts", 10},
+            {"ClothingStorageFootwear", 10},
+            {"ClothingStorageHeadwear", 10},
+            {"ClothingStorageLegwear", 10},
+            {"ClothingStorageWinter", 10},
+            {"ClothingStoresBoots", 10},
+            {"ClothingStoresDress", 10},
+            {"ClothingStoresEyewear", 10},
+            {"ClothingStoresGloves", 10},
+            {"ClothingStoresGlovesLeather", 10},
+            {"ClothingStoresHeadwear", 10},
+            {"ClothingStoresJackets", 10},
+            {"ClothingStoresJacketsFormal", 10},
+            {"ClothingStoresJacketsLeather", 10},
+            {"ClothingStoresJeans", 10},
+            {"ClothingStoresJumpers", 10},
+            {"ClothingStoresOvershirts", 10},
+            {"ClothingStoresPants", 10},
+            {"ClothingStoresPantsFormal", 10},
+            {"ClothingStoresPantsLeather", 10},
+            {"ClothingStoresShirts", 10},
+            {"ClothingStoresShirtsFormal", 10},
+            {"ClothingStoresShoes", 10},
+            {"ClothingStoresShoesLeather", 10},
+            {"ClothingStoresSocks", 10},
+            {"ClothingStoresSport", 10},
+            {"ClothingStoresSummer", 10},
+            {"ClothingStoresUnderwearWoman", 10},
+            {"ClothingStoresUnderwearMan", 10},
+            {"ClothingStoresWoman", 10},
+            {"ControlRoomCounter", 10},
+            {"CrateAntiqueStove", 10},
+            {"CrateBakingSoda", 10},
+            {"CrateBatteries", 10},
+            {"CrateBlueComfyChair", 10},
+            {"CrateBluePlasticChairs", 10},
+            {"CrateBlueRattanChair", 10},
+            {"CrateBooks", 10},
+            {"CrateBrownComfyChair", 10},
+            {"CrateBrownLowTables", 10},
+            {"CrateButter", 10},
+            {"CrateCameraFilm", 10},
+            {"CrateCamping", 10},
+            {"CrateCandyPackage", 10},
+            {"CrateCannedFood", 10},
+            {"CrateCannedFoodSpoiled", 10},
+            {"CrateCanning", 10},
+            {"CrateCarpentry", 10},
+            {"CrateCereal", 10},
+            {"CrateCharcoal", 10},
+            {"CrateChips", 10},
+            {"CrateChocolate", 10},
+            {"CrateChocolateChips", 10},
+            {"CrateChromeSinks", 10},
+            {"CrateCigarettes", 10},
+            {"CrateCocoaPowder", 10},
+            {"CrateConesIceCream", 10},
+            {"CrateCompactDiscs", 10},
+            {"CrateCornflour", 10},
+            {"CrateClothesRandom", 10},
+            {"CrateCoffee", 10},
+            {"CrateComics", 10},
+            {"CrateComputer", 10},
+            {"CrateConcrete", 10},
+            {"CrateCostume", 10},
+            {"CrateCrackers", 10},
+            {"CrateDarkBlueChairs", 10},
+            {"CrateDarkWoodenChairs", 10},
+            {"CrateDishes", 10},
+            {"CrateElectronics", 10},
+            {"CrateEmptyBottles1", 10},
+            {"CrateEmptyBottles2", 10},
+            {"CrateEmptyMixed", 10},
+            {"CrateEmptyTinCans", 10},
+            {"CrateFancyBlackChairs", 10},
+            {"CrateFancyDarkTables", 10},
+            {"CrateFancyLowTables", 10},
+            {"CrateFancyToilets", 10},
+            {"CrateFancyWhiteChairs", 10},
+            {"CrateFarming", 10},
+            {"CrateFishing", 10},
+            {"CrateFlour", 10},
+            {"CrateFertilizer", 10},
+            {"CrateFitnessWeights", 10},
+            {"CrateFoldingChairs", 10},
+            {"CrateFootwearRandom", 10},
+            {"CrateFountainCups", 10},
+            {"CrateGrahamCrackers", 10},
+            {"CrateGravelBags", 10},
+            {"CrateGravyMix", 10},
+            {"CrateGreenChairs", 10},
+            {"CrateGreenComfyChair", 10},
+            {"CrateGreenOven", 10},
+            {"CrateGreyChairs", 10},
+            {"CrateGreyComfyChair", 10},
+            {"CrateGreyOven", 10},
+            {"CrateGum", 10},
+            {"CrateHotsauce", 10},
+            {"CrateIndustrialSinks", 10},
+            {"CrateInstruments", 10},
+            {"CrateLeather", 10},
+            {"CrateLightRoundTable", 10},
+            {"CrateLinens", 10},
+            {"CrateLongTables", 10},
+            {"CrateLumber", 10},
+            {"CrateMagazines", 10},
+            {"CrateMannequins", 10},
+            {"CrateMapleSyrup", 10},
+            {"CrateMaps", 10},
+            {"CrateMapsLarge", 10},
+            {"CrateMarinara", 10},
+            {"CrateMarshmallows", 10},
+            {"CrateMechanics", 10},
+            {"CrateMetalwork", 10},
+            {"CrateMetalLockers", 10},
+            {"CrateModernOven", 10},
+            {"CrateNewspapers", 10},
+            {"CrateOakRoundTable", 10},
+            {"CrateOfficeChairs", 10},
+            {"CrateOfficeSupplies", 10},
+            {"CrateOilOlive", 10},
+            {"CrateOilVegetable", 10},
+            {"CrateOrangeModernChair", 10},
+            {"CratePaint", 10},
+            {"CratePancakeMix", 10},
+            {"CratePaperBagJays", 10},
+            {"CratePaperBagSpiffos", 10},
+            {"CratePaperNapkins", 10},
+            {"CratePasta", 10},
+            {"CratePeanuts", 10},
+            {"CratePetSupplies", 10},
+            {"CratePlaster", 10},
+            {"CratePlasticChairs", 10},
+            {"CratePlasticLowTables", 10},
+            {"CratePlasticTrays", 10},
+            {"CratePopcorn", 10},
+            {"CratePropane", 10},
+            {"CratePurpleRattanChair", 10},
+            {"CratePurpleWoodenChairs", 10},
+            {"CrateRandomJunk", 10},
+            {"CrateRedBBQ", 10},
+            {"CrateRedChairs", 10},
+            {"CrateRedOven", 10},
+            {"CrateRice", 10},
+            {"CrateRiceVinegar", 10},
+            {"CrateRedWoodenChairs", 10},
+            {"CrateRoundTable", 10},
+            {"CrateSalonSupplies", 10},
+            {"CrateSandBags", 10},
+            {"CrateSeaweed", 10},
+            {"CrateSheetMetal", 10},
+            {"CrateSmallTables", 10},
+            {"CrateSodaBottles", 10},
+            {"CrateSodaCans", 10},
+            {"CrateSoysauce", 10},
+            {"CrateSpiffoMerch", 10},
+            {"CrateSports", 10},
+            {"CrateSugar", 10},
+            {"CrateSugarBrown", 10},
+            {"CrateSunflowerSeeds", 10},
+            {"CrateTacoShells", 10},
+            {"CrateTailoring", 10},
+            {"CrateTea", 10},
+            {"CrateTools", 10},
+            {"CrateTortillaChips", 10},
+            {"CrateToys", 10},
+            {"CrateTV", 10},
+            {"CrateTVWide", 10},
+            {"CrateVHSTapes", 10},
+            {"CrateWhiteComfyChair", 10},
+            {"CrateWhiteSimpleChairs", 10},
+            {"CrateWhiteSinks", 10},
+            {"CrateWhiteWoodenChairs", 10},
+            {"CrateWoodenChairs", 10},
+            {"CrateWoodenStools", 10},
+            {"CrateYeast", 10},
+            {"CrateYellowModernChair", 10},
+            {"CrateWallets", 10},
+            {"CrepeKitchenBaking", 10},
+            {"CrepeKitchenFridge", 10},
+            {"CrepeKitchenSauce", 10},
+            {"DaycareCounter", 10},
+            {"DaycareDesk", 10},
+            {"DaycareShelves", 10},
+            {"DeepFryKitchenFreezer", 10},
+            {"DeepFryKitchenFridge", 10},
+            {"DepartmentStoreJewelry", 10},
+            {"DepartmentStoreWatches", 10},
+            {"DeskGeneric", 10},
+            {"DinerBackRoomCounter", 10},
+            {"DinerKitchenFreezer", 10},
+            {"DinerKitchenFridge", 10},
+            {"DishCabinetGeneric", 10},
+            {"DishCabinetLiquor", 10},
+            {"DogFoodFactoryCans", 10},
+            {"DresserGeneric", 10},
+            {"DrugLabGuns", 10},
+            {"DrugLabOutfit", 10},
+            {"DrugLabSupplies", 10},
+            {"DrugShackDrugs", 10},
+            {"DrugShackMisc", 10},
+            {"DrugShackTools", 10},
+            {"DrugShackWeapons", 10},
+            {"ElectronicStoreAppliances", 10},
+            {"ElectronicStoreComputers", 10},
+            {"ElectronicStoreHAMRadio", 10},
+            {"ElectronicStoreLights", 10},
+            {"ElectronicStoreMagazines", 10},
+            {"ElectronicStoreMisc", 10},
+            {"ElectronicStoreMusic", 10},
+            {"Empty", 10},
+            {"EngineerTools", 10},
+            {"FactoryLockers", 10},
+            {"FilingCabinetGeneric", 10},
+            {"FirearmWeapons", 10},
+            {"FireDeptLockers", 10},
+            {"FireStorageOutfit", 10},
+            {"FireStorageTools", 10},
+            {"FishChipsKitchenButcher", 10},
+            {"FishChipsKitchenFreezer", 10},
+            {"FishChipsKitchenFridge", 10},
+            {"FishChipsKitchenSauce", 10},
+            {"FishingStoreBait", 10},
+            {"FishingStoreGear", 10},
+            {"FitnessTrainer", 10},
+            {"FoodGourmet", 10},
+            {"ForestFireTools", 10},
+            {"FreezerGeneric", 10},
+            {"FreezerRich", 10},
+            {"FreezerTrailerPark", 10},
+            {"FreezerIceCream", 10},
+            {"FridgeBeer", 10},
+            {"FridgeBottles", 10},
+            {"FridgeBreakRoom", 10},
+            {"FridgeGeneric", 10},
+            {"FridgeOffice", 10},
+            {"FridgeOther", 10},
+            {"FridgeRich", 10},
+            {"FridgeSnacks", 10},
+            {"FridgeSoda", 10},
+            {"FridgeTrailerPark", 10},
+            {"FridgeWater", 10},
+            {"FryFactoryPotatoes", 10},
+            {"GarageCarpentry", 10},
+            {"GarageFirearms", 10},
+            {"GarageMechanics", 10},
+            {"GarageMetalwork", 10},
+            {"GarageTools", 10},
+            {"GardenStoreMisc", 10},
+            {"GardenStoreTools", 10},
+            {"GasStorageMechanics", 10},
+            {"GasStorageCombo", 10},
+            {"GeneratorRoom", 10},
+            {"Gifts", 10},
+            {"GigamartBakingMisc", 10},
+            {"GigamartBedding", 10},
+            {"GigamartBottles", 10},
+            {"GigamartCandy", 10},
+            {"GigamartCannedFood", 10},
+            {"GigamartCrisps", 10},
+            {"GigamartDryGoods", 10},
+            {"GigamartFarming", 10},
+            {"GigamartHouseElectronics", 10},
+            {"GigamartHousewares", 10},
+            {"GigamartPots", 10},
+            {"GigamartSauce", 10},
+            {"GigamartSchool", 10},
+            {"GigamartLightbulb", 10},
+            {"GigamartTools", 10},
+            {"GigamartToys", 10},
+            {"GolfLockers", 10},
+            {"GrillAcessories", 10},
+            {"GroceryStandFruits1", 10},
+            {"GroceryStandFruits2", 10},
+            {"GroceryStandFruits3", 10},
+            {"GroceryStandLettuce", 10},
+            {"GroceryStandVegetables1", 10},
+            {"GroceryStandVegetables2", 10},
+            {"GroceryStandVegetables3", 10},
+            {"GroceryStandVegetables4", 10},
+            {"GroceryStorageCrate1", 10},
+            {"GroceryStorageCrate2", 10},
+            {"GroceryStorageCrate3", 10},
+            {"GunStoreAmmunition", 10},
+            {"GunStoreCounter", 10},
+            {"GunStoreDisplayCase", 10},
+            {"GunStoreMagazineRack", 10},
+            {"GunStoreShelf", 10},
+            {"GymLaundry", 10},
+            {"GymLockers", 10},
+            {"GymSweatbands", 10},
+            {"GymTowels", 10},
+            {"GymWeights", 10},
+            {"Hiker", 10},
+            {"Hobbies", 10},
+            {"HolidayStuff", 10},
+            {"Homesteading", 10},
+            {"HospitalLockers", 10},
+            {"Hunter", 10},
+            {"HuntingLockers", 10},
+            {"ImprovisedCrafts", 10},
+            {"ItalianKitchenBaking", 10},
+            {"ItalianKitchenButcher", 10},
+            {"ItalianKitchenFreezer", 10},
+            {"ItalianKitchenFridge", 10},
+            {"JanitorChemicals", 10},
+            {"JanitorCleaning", 10},
+            {"JanitorMisc", 10},
+            {"JanitorTools", 10},
+            {"JaysDiningCounter", 10},
+            {"JaysKitchenBags", 10},
+            {"JaysKitchenBaking", 10},
+            {"JaysKitchenButcher", 10},
+            {"JaysKitchenFreezer", 10},
+            {"JaysKitchenFridge", 10},
+            {"JaysKitchenSauce", 10},
+            {"JewelryGems", 10},
+            {"JewelryGold", 10},
+            {"JewelryNavelRings", 10},
+            {"JewelryOthers", 10},
+            {"JewelrySilver", 10},
+            {"JewelryWeddingRings", 10},
+            {"JewelryWrist", 10},
+            {"JewelryStorageAll", 10},
+            {"JunkBin", 10},
+            {"JunkHoard", 10},
+            {"KitchenBaking", 10},
+            {"KitchenBook", 10},
+            {"KitchenBottles", 10},
+            {"KitchenBreakfast", 10},
+            {"KitchenCannedFood", 10},
+            {"KitchenDishes", 10},
+            {"KitchenDryFood", 10},
+            {"KitchenPots", 10},
+            {"KitchenRandom", 10},
+            {"KnifeFactoryCutlery", 10},
+            {"KnifeFactoryKitchenKnife", 10},
+            {"KnifeFactoryMeatCleaver", 10},
+            {"LaundryCleaning", 10},
+            {"LaundryHospital", 10},
+            {"LaundryLoad1", 10},
+            {"LaundryLoad2", 10},
+            {"LaundryLoad3", 10},
+            {"LaundryLoad4", 10},
+            {"LaundryLoad5", 10},
+            {"LaundryLoad6", 10},
+            {"LaundryLoad7", 10},
+            {"LaundryLoad8", 10},
+            {"LibraryBooks", 10},
+            {"LibraryCounter", 10},
+            {"LingerieStoreAccessories", 10},
+            {"LingerieStoreBras", 10},
+            {"LingerieStoreOutfits", 10},
+            {"LingerieStoreUnderwear", 10},
+            {"LivingRoomShelf", 10},
+            {"LivingRoomShelfNoTapes", 10},
+            {"LivingRoomSideTable", 10},
+            {"LivingRoomSideTableNoRemote", 10},
+            {"Locker", 10},
+            {"LockerArmyBedroom", 10},
+            {"LockerClassy", 10},
+            {"LoggingFactoryTools", 10},
+            {"MagazineRackMaps", 10},
+            {"MagazineRackMixed", 10},
+            {"MagazineRackNewspaper", 10},
+            {"Meat", 10},
+            {"MechanicShelfBooks", 10},
+            {"MechanicShelfBrakes", 10},
+            {"MechanicShelfElectric", 10},
+            {"MechanicShelfMisc", 10},
+            {"MechanicShelfMufflers", 10},
+            {"MechanicShelfOutfit", 10},
+            {"MechanicShelfSuspension", 10},
+            {"MechanicShelfTools", 10},
+            {"MechanicShelfWheels", 10},
+            {"MechanicSpecial", 10},
+            {"MedicalClinicDrugs", 10},
+            {"MedicalClinicOutfit", 10},
+            {"MedicalClinicTools", 10},
+            {"MedicalOfficeBooks", 10},
+            {"MedicalStorageDrugs", 10},
+            {"MedicalStorageOutfit", 10},
+            {"MedicalStorageTools", 10},
+            {"MeleeWeapons", 10},
+            {"MetalShopTools", 10},
+            {"MexicanKitchenBaking", 10},
+            {"MexicanKitchenButcher", 10},
+            {"MexicanKitchenFreezer", 10},
+            {"MexicanKitchenFridge", 10},
+            {"MexicanKitchenSauce", 10},
+            {"MorgueChemicals", 10},
+            {"MorgueOutfit", 10},
+            {"MorgueTools", 10},
+            {"MotelFridge", 10},
+            {"MotelLinens", 10},
+            {"MotelTowels", 10},
+            {"MovieRentalShelves", 10},
+            {"MusicStoreBass", 10},
+            {"MusicStoreCases", 10},
+            {"MusicStoreCDs", 10},
+            {"MusicStoreGuitar", 10},
+            {"MusicStoreOthers", 10},
+            {"MusicStoreSpeaker", 10},
+            {"OfficeCounter", 10},
+            {"OfficeDesk", 10},
+            {"OfficeDeskHome", 10},
+            {"OfficeDrawers", 10},
+            {"OfficeShelfSupplies", 10},
+            {"OptometristGlasses", 10},
+            {"OtherGeneric", 10},
+            {"PawnShopCases", 10},
+            {"PawnShopGuns", 10},
+            {"PawnShopGunsSpecial", 10},
+            {"PawnShopKnives", 10},
+            {"PetShopShelf", 10},
+            {"PharmacyCosmetics", 10},
+            {"Photographer", 10},
+            {"PizzaKitchenBaking", 10},
+            {"PizzaKitchenButcher", 10},
+            {"PizzaKitchenCheese", 10},
+            {"PizzaKitchenFridge", 10},
+            {"PizzaKitchenSauce", 10},
+            {"PlankStashGun", 10},
+            {"PlankStashMagazine", 10},
+            {"PlankStashMisc", 10},
+            {"PlankStashMoney", 10},
+            {"PlumbingSupplies", 10},
+            {"PoliceDesk", 10},
+            {"PoliceEvidence", 10},
+            {"PoliceLockers", 10},
+            {"PoliceStorageAmmunition", 10},
+            {"PoliceStorageGuns", 10},
+            {"PoliceStorageOutfit", 10},
+            {"PoolLockers", 10},
+            {"PostOfficeBooks", 10},
+            {"PostOfficeBoxes", 10},
+            {"PostOfficeMagazines", 10},
+            {"PostOfficeNewspapers", 10},
+            {"PostOfficeSupplies", 10},
+            {"PrisonCellRandom", 10},
+            {"PrisonGuardLockers", 10},
+            {"ProduceStorageApples", 10},
+            {"ProduceStorageBellPeppers", 10},
+            {"ProduceStorageBroccoli", 10},
+            {"ProduceStorageCabbages", 10},
+            {"ProduceStorageCarrots", 10},
+            {"ProduceStorageCherries", 10},
+            {"ProduceStorageCorn", 10},
+            {"ProduceStorageEggplant", 10},
+            {"ProduceStorageLeeks", 10},
+            {"ProduceStorageLettuce", 10},
+            {"ProduceStorageOnions", 10},
+            {"ProduceStoragePeaches", 10},
+            {"ProduceStoragePear", 10},
+            {"ProduceStoragePotatoes", 10},
+            {"ProduceStorageRadishes", 10},
+            {"ProduceStorageStrawberries", 10},
+            {"ProduceStorageTomatoes", 10},
+            {"ProduceStorageWatermelons", 10},
+            {"RadioFactoryComponents", 10},
+            {"RandomFiller", 10},
+            {"RestaurantKitchenFreezer", 10},
+            {"RestaurantKitchenFridge", 10},
+            {"SafehouseArmor", 10},
+            {"SafehouseMedical", 10},
+            {"SafehouseTraps", 10},
+            {"SalonCounter", 10},
+            {"SalonShelfHaircare", 10},
+            {"SalonShelfTowels", 10},
+            {"SchoolLockers", 10},
+            {"ScienceMisc", 10},
+            {"SeafoodKitchenButcher", 10},
+            {"SeafoodKitchenFreezer", 10},
+            {"SeafoodKitchenFridge", 10},
+            {"SeafoodKitchenSauce", 10},
+            {"SecurityLockers", 10},
+            {"ServingTrayBiscuits", 10},
+            {"ServingTrayBurgers", 10},
+            {"ServingTrayBurritos", 10},
+            {"ServingTrayChicken", 10},
+            {"ServingTrayChickenNuggets", 10},
+            {"ServingTrayCornbread", 10},
+            {"ServingTrayFish", 10},
+            {"ServingTrayFries", 10},
+            {"ServingTrayGravy", 10},
+            {"ServingTrayHotdogs", 10},
+            {"ServingTrayMaki", 10},
+            {"ServingTrayMeatDumplings", 10},
+            {"ServingTrayMeatSteamBuns", 10},
+            {"ServingTrayNoodleSoup", 10},
+            {"ServingTrayOmelettes", 10},
+            {"ServingTrayOnigiri", 10},
+            {"ServingTrayOnionRings", 10},
+            {"ServingTrayOysters", 10},
+            {"ServingTrayPancakes", 10},
+            {"ServingTrayPerogies", 10},
+            {"ServingTrayPotatoPancakes", 10},
+            {"ServingTrayPie", 10},
+            {"ServingTrayPizza", 10},
+            {"ServingTrayRefriedBeans", 10},
+            {"ServingTrayScrambledEggs", 10},
+            {"ServingTrayShrimp", 10},
+            {"ServingTrayShrimpDumplings", 10},
+            {"ServingTraySpringRolls", 10},
+            {"ServingTraySushiEgg", 10},
+            {"ServingTraySushiFish", 10},
+            {"ServingTrayTaco", 10},
+            {"ServingTrayTofuFried", 10},
+            {"ServingTrayWaffles", 10},
+            {"SewingStoreTools", 10},
+            {"SewingStoreFabric", 10},
+            {"ShelfGeneric", 10},
+            {"SpiffosDiningCounter", 10},
+            {"SpiffosKitchenBags", 10},
+            {"SpiffosKitchenCounter", 10},
+            {"SpiffosKitchenFreezer", 10},
+            {"SpiffosKitchenFridge", 10},
+            {"SportStoreSneakers", 10},
+            {"SportStorageBats", 10},
+            {"SportStorageBalls", 10},
+            {"SportStorageHelmets", 10},
+            {"SportStoragePaddles", 10},
+            {"SportStorageRacquets", 10},
+            {"SportStorageSticks", 10},
+            {"StoreCounterBags", 10},
+            {"StoreCounterBagsFancy", 10},
+            {"StoreCounterCleaning", 10},
+            {"StoreCounterTobacco", 10},
+            {"StoreDisplayWatches", 10},
+            {"StoreKitchenBaking", 10},
+            {"StoreKitchenButcher", 10},
+            {"StoreKitchenCafe", 10},
+            {"StoreKitchenCutlery", 10},
+            {"StoreKitchenBags", 10},
+            {"StoreKitchenCups", 10},
+            {"StoreKitchenDishes", 10},
+            {"StoreKitchenGlasses", 10},
+            {"StoreKitchenPotatoes", 10},
+            {"StoreKitchenPots", 10},
+            {"StoreKitchenSauce", 10},
+            {"StoreKitchenTrays", 10},
+            {"StoreShelfBeer", 10},
+            {"StoreShelfCombo", 10},
+            {"StoreShelfDrinks", 10},
+            {"StoreShelfElectronics", 10},
+            {"StoreShelfMechanics", 10},
+            {"StoreShelfMedical", 10},
+            {"StoreShelfSnacks", 10},
+            {"StoreShelfSpices", 10},
+            {"StoreShelfWhiskey", 10},
+            {"StoreShelfWine", 10},
+            {"StripClubDressers", 10},
+            {"SurvivalGear", 10},
+            {"SushiKitchenBaking", 10},
+            {"SushiKitchenCutlery", 10},
+            {"SushiKitchenFreezer", 10},
+            {"SushiKitchenFridge", 10},
+            {"SushiKitchenSauce", 10},
+            {"TestingLab", 10},
+            {"TheatreDrinks", 10},
+            {"TheatreKitchenFreezer", 10},
+            {"TheatreSnacks", 10},
+            {"TheatrePopcorn", 10},
+            {"ToolStoreAccessories", 10},
+            {"ToolStoreBooks", 10},
+            {"ToolStoreCarpentry", 10},
+            {"ToolStoreFarming", 10},
+            {"ToolStoreFootwear", 10},
+            {"ToolStoreMetalwork", 10},
+            {"ToolStoreMisc", 10},
+            {"ToolStoreOutfit", 10},
+            {"ToolStoreTools", 10},
+            {"Trapper", 10},
+            {"VacationStuff", 10},
+            {"WallDecor", 10},
+            {"WardrobeChild", 10},
+            {"WardrobeMan", 10},
+            {"WardrobeManClassy", 10},
+            {"WardrobeRedneck", 10},
+            {"WardrobeWoman", 10},
+            {"WardrobeWomanClassy", 10},
+            {"WesternKitchenBaking", 10},
+            {"WesternKitchenButcher", 10},
+            {"WesternKitchenFreezer", 10},
+            {"WesternKitchenFridge", 10},
+            {"WesternKitchenSauce", 10},
+            {"WhiskeyBottlingEmpty", 10},
+            {"WhiskeyBottlingFull", 10},
+            {"WireFactoryBarbed", 10},
+            {"WireFactoryBasic", 10},
+            {"WireFactoryElectric", 10},
+            {"ZippeeClothing", 10},
+        },
+        Items = {
+            "NWDriedMeatPackage"
+        }
+    }
+}
+
+local function getLootTable(strLootTableName)
+    return ProceduralDistributions.list[strLootTableName]
+end
+
+local function insertItem(tLootTable, strItem, iWeight)
+    table.insert(tLootTable.items, strItem)
+    table.insert(tLootTable.items, iWeight)
+end
+
+local function preDistributionMerge()
+    for i=1, #ItemDist do
+      for j=1, #(ItemDist[i].Distributions) do
+        for k=1, #(ItemDist[i].Items) do
+          local tLootTable = getLootTable(ItemDist[i].Distributions[j][1])
+          local strItem = ItemDist[i].Items[k]
+          local iWeight = ItemDist[i].Distributions[j][2]
+          insertItem(tLootTable, strItem, iWeight)
+        end
+      end
+    end
+  end
+  Events.OnPreDistributionMerge.Add(preDistributionMerge)
